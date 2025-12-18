@@ -1,0 +1,136 @@
+/* PRODUCT CARD */
+.product-card {
+  display: flex;
+  margin: 1rem auto;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 90%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+}
+
+.product-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-category {
+  font-size: 0.85rem;
+  color: #777;
+  text-transform: capitalize;
+}
+
+.product-description {
+  font-size: 0.85rem;
+  color: #555;
+  max-height: 3.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 600;
+}
+
+.product-price {
+  color: #e53935;
+}
+
+.product-buy {
+  background-color: white;
+  color: #e53935;
+  border: 0.1rem solid #e53935;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.product-buy:hover {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.5rem;
+}
+
+.product-rating {
+  background-color: #f1c40f;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* FILTER PANEL */
+.filter-open-button {
+  border-radius: 5px;
+  margin-top: 20px;
+  
+}
+
+.filter-panel {
+  background-color: #000000;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 50%;
+  margin: 20px auto;
+  padding: 0.5rem;
+}
+
+.filter-panel-wrapper {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-panel-title-input {
+  max-width: 116px;
+  border: none;
+}
+
+.filter-panel-wrapper div {
+  display: flex;
+  justify-content: space-around;
+  max-width: 120px;
+}
+
+.filter-panel-price-input {
+  width: 50%;
+}
+
+.filter-panel button {
+  width: 50px;
+  margin: auto;
+  margin-top: 0.5rem;
+  border: none;
+}

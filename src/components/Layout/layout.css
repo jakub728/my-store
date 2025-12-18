@@ -1,0 +1,40 @@
+.layout-header {
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #e53935;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #e53935;
+  position: relative;
+}
+
+.product-badge {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  background-color: #e53935;
+  color: white;
+  min-width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: bold;
+}
