@@ -98,7 +98,7 @@ export default function Products() {
             </div>
           </div>
 
-          <button onClick={() => setFilter({})}>Reset</button>
+          <button className="filter-reset-button" onClick={() => setFilter({})}>Reset</button>
         </div>
       )}
 

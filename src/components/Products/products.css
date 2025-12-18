@@ -92,7 +92,24 @@
 .filter-open-button {
   border-radius: 5px;
   margin-top: 20px;
-  
+}
+
+.filter-open-button:hover {
+  background-color: #e53935;
+  color: white;
+}
+
+.filter-reset-button {
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+}
+
+.filter-reset-button:hover {
+  background-color: #ffffff;
+  color: black;
 }
 
 .filter-panel {

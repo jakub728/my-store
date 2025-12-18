@@ -17,7 +17,7 @@ type Product = {
 
 export default function ProductCard({ product }: { product: Product }) {
   const { addToBasket } = useProducts();
-  const notify = () => toast(`${product.title} added!`);
+  const notify = () => toast(`${product.title} added to cart!`);
 
   return (
     <div className="product-card">
