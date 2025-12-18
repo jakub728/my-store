@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Utwórz aplikację React o dowolnej konfiguracji. Wykorzystaj w projekcie język
+   Typescript.
+2. Dodaj i wykorzystaj bibliotekę React router dom, aby stworzyć routing dla stron:
+   a. Home
+   b. Products
+3. Zadbaj o przypadek gdy użytkownik znajdzie się pod niepoprawnym adresem.
+4. Na każdej stronie ma znajdować się nawigacja, dzięki której możemy przejść na
+   stronę z produktami oraz na stronę główną.
+5. Na stronie z produktami (Products) należy pobrać listę produktów z użyciem
+   https://fakestoreapi.com/. Do pobrania można wykorzystać Fetch Api lub dowolną
+   bibliotekę.
+   a. Przedstaw produkty w formie listy pokazując zdjęcie, tytuł, cenę, kategorię i
+   ocenę.
+   b. Dodaj możliwość sortowania po tytule, cenie lub domyślnie.
+6. Funkcjonalność koszyka:
+   a. Każdy produkt można dodać i usunąć z koszyka.
+   b. Przy każdym produkcie należy wskazać aktualnie wybraną ilość.
+   c. Koszyk przechowuje stan wybranych produktów.
+   d. W prawym górnym rogu aplikacji pokazywana jest ikona symbolizująca
+   koszyk.
+   e. Ikona zawiera informację o ilości wybranych produktów (badge).
+   f. Ikona jest widoczna na wszystkich stronach.
+   g. Po odświeżeniu strony stan koszyka jest zachowany.
+7. Podczas ładowania produktów pokaż informację o pobieraniu.
+8. W przypadku błędu pobierania pokaż informację (np. “Nie udało się pobrać
+   produktów”)
+9. Na stronie głównej ma pojawiać się losowy produkt, który może zostać dodany do
+   koszyka
